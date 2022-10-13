@@ -1,0 +1,7 @@
+name: Deploy to Production
+env:
+  PIPELINE: Production
+on: 
+  push:
+    branches:
+      - main
