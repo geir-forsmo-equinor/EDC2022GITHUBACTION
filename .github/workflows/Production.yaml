@@ -5,3 +5,16 @@ on:
   push:
     branches:
       - main
+jobs:
+  deploy-to-production-job:
+    runs-on: ubunto-latest
+    environment:
+      name: Production
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - uses: action/setup-dotnet@v2
+
+  
